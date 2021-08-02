@@ -1,0 +1,9 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.section {
+  width: 100vw;
+  // height: 100vh;
+  margin-top: 2em;
+  @include flexBox(row, center, center);
+}

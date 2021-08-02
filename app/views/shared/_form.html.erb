@@ -1,0 +1,31 @@
+<section class="section">
+  <div class="form-container">
+    <%= form_with scope: :post, model: @post, local: true do |f| %>
+    
+      <div class="field">
+        <%= f.label :title%>
+        <%= f.text_field :title, class:'text-field' %><br />
+      </div>
+
+      <div class="field">
+        <%= f.label :rating%>
+        <%= f.text_field :rating, class:'text-field' %><br />
+      </div>
+
+      <div class="field">
+        <%= f.label :content %>
+        <%= f.text_area :content, class:'text-area' %><br />
+      </div>
+
+      <div class="field">
+        <%= f.label :date %>
+        <%= f.date_field :date, class:'text-field' %><br />
+      </div>
+
+      <div class="field">
+        <%= f.submit  %>
+      </div>
+
+    <% end %>
+  </div>
+</section>

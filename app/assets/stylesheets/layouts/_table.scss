@@ -1,0 +1,36 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.table {
+  width: 100%;
+
+  thead {
+    tr {
+      font-size: var(--fs-base);
+      text-align: left;
+      background-color: $darkest;
+      color: $accent2;
+    }
+    th {
+      padding: 0.5em 0;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid $darker;
+
+      &:nth-child(odd) {
+        background-color: #f3f3f3;
+      }
+
+      &:last-of-type {
+        border-bottom: 2px solid $accent2;
+      }
+
+      td {
+        padding: 0.5em 0;
+      }
+    }
+  }
+}

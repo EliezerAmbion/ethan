@@ -1,0 +1,34 @@
+<section class="section">
+
+  <% if @posts.count == 0 %>
+    <h1>NO post</h1>
+
+  <% else %>
+    <table class="table">
+      <caption>Ethan's Food diary</caption>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Content</th>
+          <th>Rating</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+        <tbody>
+          <% @posts.each do |c| %>
+            <tr>
+              <td><%= c.title %></td>
+              <td><%= c.content %></td>
+              <td><%= c.rating %></td>
+              <td><%= c.date %></td>
+              <td><%= link_to 'Delete', post_path(c), method: :delete, data: { confirm: "Are you sure you want to delete this agenda?" } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+
+    </table>
+  <% end %>
+
+</section>

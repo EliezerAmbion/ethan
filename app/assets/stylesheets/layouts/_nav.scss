@@ -1,0 +1,25 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+header {
+  text-align: center;
+  background-color: $accent;
+  padding: 0.5em 0;
+
+  .brand {
+    font-family: 'WindSong', cursive;
+  }
+}
+
+.nav {
+  .nav__ul {
+    @include flexBox(row, space-around, center);
+    padding: 0.5em 0;
+    font-weight: 900;
+
+    a {
+      color: $darker;
+      text-decoration: underline;
+    }
+  }
+}
