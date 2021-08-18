@@ -15,23 +15,20 @@ class PostsController < ApplicationController
       redirect_to root_path
 
     else
-      render 'new'
+      render "new"
     end
-  end
-
-  def show
-    @post = Post.find(params[:id])
   end
 
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to root_path, notice: "Successfully deleted"
+    redirect_to root_path, notice: "Successfully deleted!"
   end
 
 
   private
+
   def post_params
-    params.require(:post).permit(:title, :content, :rating, :date)
+    params.require(:post).permit(:title, :rating, :content, :date)
   end
 end
