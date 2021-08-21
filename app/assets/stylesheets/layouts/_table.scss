@@ -2,12 +2,12 @@
 @import '../abstracts/variables';
 
 .table {
-  width: 100%;
+  width: 35rem;
 
   thead {
     tr {
       font-size: var(--fs-base);
-      text-align: left;
+      // text-align: left;
       background-color: $darkest;
       color: $accent2;
     }
@@ -19,6 +19,7 @@
   tbody {
     tr {
       border-bottom: 1px solid $darker;
+      text-align: center;
 
       &:nth-child(odd) {
         background-color: #f3f3f3;

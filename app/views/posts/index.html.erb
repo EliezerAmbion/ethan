@@ -24,6 +24,7 @@
               <td><%= c.rating %></td>
               <td><%= c.date %></td>
               <td><%= link_to 'Show', post_path(c) %> | 
+              <%= link_to 'Edit', edit_post_path(c) %> | 
               <%= link_to 'Delete', post_path(c), method: :delete, data: { confirm: "Are you sure you want to delete this agenda?" } %></td>
             </tr>
           <% end %>
