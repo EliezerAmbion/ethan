@@ -1,0 +1,24 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.flash_messages {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+
+  .flash_alert {
+    margin: auto;
+    padding: 0.5em 1em;
+    background-color: red;
+  }
+
+  .flash_notice {
+    margin: auto;
+    padding: 0.5em 1em;
+    background-color: mediumseagreen;
+  }
+}
+
+.field_with_errors {
+  display: inline;
+}

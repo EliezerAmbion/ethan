@@ -16,7 +16,8 @@ class PostsController < ApplicationController
       redirect_to root_path, notice: "Successfully created a post"
 
     else
-      render "new", alert: @post.errors.full_messages.first
+      flash[:alert] = @post.errors.full_messages.first
+      render "new"
     end
   end
 
@@ -31,7 +32,8 @@ class PostsController < ApplicationController
       redirect_to root_path, notice: "Successfully updated post"
 
     else
-      render "edit", alert: @post.errors.full_messages.first
+      flash[:alert] = @post.errors.full_messages.first
+      render "edit"
     end
   end
 

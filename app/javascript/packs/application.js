@@ -11,3 +11,11 @@ import "channels"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+
+function hideFlash() {
+  setInterval(function () {
+    document.querySelector('.flash_messages').style.display = 'none';
+  }, 2500);
+}
+hideFlash();
